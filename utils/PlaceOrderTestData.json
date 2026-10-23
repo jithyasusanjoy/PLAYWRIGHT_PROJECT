@@ -1,0 +1,18 @@
+{
+  "signupusername": "jithyatest12", 
+  "signuppassword": "Jithya10test2" ,   
+  "signupsuccess": "Sign up successful.",
+  "validusername": "jithya",
+  "validpassword": "Jithya10",
+  "invalidusername": "jithyaparrot",
+  "invalidpassword": "WrongPass123",
+  "invalidnamepassmsg": "User does not exist.",
+  "wrongpasswordmsg": "Wrong password.",
+  "productaddmsg": "Product added.",
+   "shipname":"malu",
+   "shipcountry":"Germany",
+   "shipcity":"stuttgart",
+   "shipcard":"234232",
+   "shipmonth":"12",
+   "shipyear":"2026"
+}
