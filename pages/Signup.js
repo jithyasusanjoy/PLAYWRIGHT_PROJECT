@@ -1,5 +1,5 @@
 const { expect } = require("@playwright/test")
-
+ 
 class Signup{
     constructor(page)
     {
@@ -23,19 +23,27 @@ class Signup{
     async entersignupcredential(username,password)
     {
         await this.username.fill(username)
-        await this.password.fill(password)      
+        await this.password.fill(password)     
     }   
+     async clicksignupbtn()
+    {      
+    await this.siginupbtn.click() 
+    }
     async clicksignup(signupsuccess)
-    {
-        await this.siginupbtn.click()
+    {      
         const dialog = await this.page.waitForEvent('dialog') 
         await expect(dialog.message()).toBe(signupsuccess)
         await dialog.accept()
-
     }
+    
     async closesignup()
     {
         await this.closebtn.click()
+        await expect(this.signupdialog).toBeHidden()  
+    }
+    async validateclosesignup()
+    {
+        
         await expect(this.signupdialog).toBeHidden()  
     }
 }

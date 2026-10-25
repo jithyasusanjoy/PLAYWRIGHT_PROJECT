@@ -7,9 +7,14 @@ class Logout{
         this.logoutbtn=page.getByRole('link', { name: 'Log out' })
         this.welcome=page.getByRole('link', { name: /^Welcome / })
     }
-    async validatelogout()
+    async clicklogoutbtn()
     {
         await this.logoutbtn.click();
+        await expect(this.welcome).toBeHidden()
+    }
+    async validatelogout()
+    {
+        
         await expect(this.welcome).toBeHidden()
     }
 }

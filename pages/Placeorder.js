@@ -13,7 +13,7 @@ class Placeorder
         this.shipmonth=this.placeorderpopup.locator('#month')
         this.shipyear=this.placeorderpopup.locator('#year')
         this.purchasebtn=this.placeorderpopup.getByRole('button', { name: 'Purchase' })
-        this.purchaseresponse=page.getByRole('heading', { name: 'Thank you for your purchase!' })
+        //this.purchaseresponse=page.getByRole('heading', { name: 'Thank you for your purchase!' })
         this.responseokbtn=page.getByRole('button', { name: 'OK' })
     }
  
@@ -30,11 +30,15 @@ class Placeorder
         await this.shipcard.fill(shipcard);
         await this.shipmonth.fill(shipmonth);
         await this.shipyear.fill(shipyear);
+        
+    }
+    async purchasebtnclick()
+    {
         await this.purchasebtn.click();
     }
-    async validateplaceorder()
+    async validateplaceorder(purchaseresponse)
     {
-        await expect(this.purchaseresponse).toBeVisible();
+        await expect(this.page.getByRole('heading', { name: purchaseresponse })).toBeVisible();
         await this.responseokbtn.click();
     }
 }

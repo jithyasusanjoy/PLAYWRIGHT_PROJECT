@@ -14,5 +14,11 @@
    "shipcity":"stuttgart",
    "shipcard":"234232",
    "shipmonth":"12",
-   "shipyear":"2026"
+   "shipyear":"2026",
+   "purchaseresponse":"Thank you for your purchase!",
+   "products": [
+    { "category": "Phones",   "product": "Samsung galaxy s6" },
+    { "category": "Laptops",  "product": "Sony vaio i5" },
+    { "category": "Monitors", "product": "ASUS Full HD" }
+  ]
 }
