@@ -2,13 +2,13 @@ const { Before, After, Status, AfterStep } = require("@cucumber/cucumber");
 const { chromium } = require("@playwright/test");
 
 Before(async function() {
-    console.log("I am first")
+    //console.log("I am first")
     const browser=await chromium.launch({headless:false})
      const context=await browser.newContext()
      this.page=await context.newPage()
 })
 After(async function() {
-    console.log("I am last")
+   // console.log("I am last")
 })
 AfterStep(async function(result) {
     if(result.status===Status.FAILED)

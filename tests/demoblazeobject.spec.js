@@ -117,7 +117,7 @@ test('@web purchase phone',async({page})=>{
     
 })
 
-test.only('@web purchase monitor',async({page})=>{
+test('@web purchase monitor',async({page})=>{
     const pomanager=new POManager(page)
     const signup=pomanager.getSignup()
     const login=pomanager.getLogin()

@@ -7,7 +7,6 @@ class Dashboard
         this.page=page
       
     }
-  
 
     async selectproduct(category, product)
     {
